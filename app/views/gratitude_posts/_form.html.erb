@@ -1,0 +1,20 @@
+<%= form_for @gratitude_post, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :text, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_area :text, :class => 'text_area' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :hide, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.check_box :hide, :class => 'check_box' %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                gratitude_posts_path, :class => 'btn' %>
+  </div>
+<% end %>

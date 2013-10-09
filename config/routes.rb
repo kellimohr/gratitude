@@ -1,4 +1,8 @@
 Gratitude::Application.routes.draw do
+
+  resources :gratitude_posts
+
+  root to: "gratitude_posts#index"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
