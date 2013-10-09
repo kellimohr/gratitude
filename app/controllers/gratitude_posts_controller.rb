@@ -1,0 +1,2 @@
+class GratitudePostsController < ApplicationController
+end
